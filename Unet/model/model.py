@@ -7,7 +7,7 @@ class UNet(nn.Module):
                  n_class, 
                  bias = True
                  ):
-        super(Unet, self).__init__()
+        super(UNet, self).__init__()
 
         self.dblock1 = ConvBlock(in_channels, 
                                64, 
