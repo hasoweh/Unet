@@ -1,7 +1,8 @@
 import numpy as np
 from PIL import Image
 
-def trainModel(model, device, loader, loss_list, criterion, epoch, save = None):
+
+def trainModel(model, device, loader, loss_list, criterion, optimizer, epoch, save = None):
 
     # Turn on training mode
     model.train(True)
