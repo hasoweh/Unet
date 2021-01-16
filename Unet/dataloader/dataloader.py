@@ -4,7 +4,7 @@ import torch
 import rasterio
 import numpy as np
 from pathlib import Path
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset
 
 class HedgeDataset(Dataset):
     """Hedgerow dataset class.

@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 def conv(in_channels, out_channels, kernel, padding, bias):
     return nn.Conv2d(in_channels, 
