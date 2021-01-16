@@ -1,7 +1,7 @@
 import numpy as np
 from PIL import Image
 
-def trainModel(model, loader, loss_list, criterion, epoch, save = None):
+def trainModel(model, device, loader, loss_list, criterion, epoch, save = None):
 
     # Turn on training mode
     model.train(True)
@@ -51,7 +51,7 @@ def trainModel(model, loader, loss_list, criterion, epoch, save = None):
 
     return loss_list
 
-def validateModel(model, loader, loss_list, epoch, criterion, save = None):
+def validateModel(model, device, loader, loss_list, epoch, criterion, save = None):
 
     # Turn off training mode
     model.train(False)
