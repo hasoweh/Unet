@@ -1,6 +1,6 @@
 import numpy as np
 from PIL import Image
-
+import torch
 
 def trainModel(model, device, loader, loss_list, criterion, optimizer, epoch, save = None):
 
