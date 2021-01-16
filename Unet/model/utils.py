@@ -48,7 +48,7 @@ def trainModel(model, device, loader, loss_list, criterion, optimizer, epoch, sa
             #plt.imshow(map_out)
             #map_out = np.where(map[0,:,:]>map[1,:,:], 0, 255).astype(np.uint8)
             im = Image.fromarray(map_out)
-            im.save(save)
+            im.save(save % (epoch, img_name[0]))
 
     return loss_list
 
@@ -89,6 +89,6 @@ def validateModel(model, device, loader, loss_list, epoch, criterion, save = Non
                 #plt.imshow(map_out)
                 #map_out = np.where(map[0,:,:]>map[1,:,:], 0, 255).astype(np.uint8)
                 im = Image.fromarray(map_out)
-                im.save(save)
+                im.save(save % (epoch, img_name[0]))
 
         return loss_list
