@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+import numpy as np
 
 def dice_loss(pred, truth):
 
@@ -7,3 +8,8 @@ def dice_loss(pred, truth):
     loss = 1-((2*truth*pred + 1) / (truth + pred + 1))
 
     return torch.mean(loss)
+
+def focal_loss(pred, truth, y):
+
+
+    return -((1 - pred)**y)*np.ln(pred)
