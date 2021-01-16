@@ -1,7 +1,7 @@
 from .blocks import *
 import torch.nn as nn
 
-class Unet(nn.Module):
+class UNet(nn.Module):
     def __init__(self, 
                  in_channels, 
                  n_class, 
